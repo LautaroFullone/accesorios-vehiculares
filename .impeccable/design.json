@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T12:00:00Z",
+  "title": "Design System: Accesorios Vehiculares MdP",
+  "extensions": {
+    "colorMeta": {
+      "studio-black": {
+        "role": "neutral",
+        "displayName": "Studio Black",
+        "canonical": "#050506",
+        "tonalRamp": [
+          "#050506",
+          "#0d0e10",
+          "#16181c",
+          "#2a2d33",
+          "#4a4d55",
+          "#9a9da3",
+          "#e8e9eb",
+          "#f6f7f8"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "#0d0e10",
+        "tonalRamp": [
+          "#050506",
+          "#0d0e10",
+          "#16181c",
+          "#2a2d33",
+          "#4a4d55",
+          "#9a9da3",
+          "#e8e9eb",
+          "#f6f7f8"
+        ]
+      },
+      "panel-raised": {
+        "role": "neutral",
+        "displayName": "Panel Raised",
+        "canonical": "#16181c",
+        "tonalRamp": [
+          "#050506",
+          "#0d0e10",
+          "#16181c",
+          "#2a2d33",
+          "#4a4d55",
+          "#9a9da3",
+          "#e8e9eb",
+          "#f6f7f8"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgb(255 255 255 / 0.14)",
+        "tonalRamp": [
+          "rgb(255 255 255 / 0.04)",
+          "rgb(255 255 255 / 0.07)",
+          "rgb(255 255 255 / 0.10)",
+          "rgb(255 255 255 / 0.14)",
+          "rgb(255 255 255 / 0.2)",
+          "rgb(255 255 255 / 0.3)",
+          "rgb(255 255 255 / 0.45)",
+          "rgb(255 255 255 / 0.7)"
+        ]
+      },
+      "cold-white": {
+        "role": "neutral",
+        "displayName": "Cold White",
+        "canonical": "#e8e9eb",
+        "tonalRamp": [
+          "#2a2d33",
+          "#4a4d55",
+          "#6c6f76",
+          "#9a9da3",
+          "#c9cbcf",
+          "#e8e9eb",
+          "#f2f3f4",
+          "#fafafa"
+        ]
+      },
+      "mute-grey": {
+        "role": "neutral",
+        "displayName": "Mute Grey",
+        "canonical": "#9a9da3",
+        "tonalRamp": [
+          "#2a2d33",
+          "#4a4d55",
+          "#5b5e66",
+          "#7b7e85",
+          "#9a9da3",
+          "#b5b8bc",
+          "#c9cbcf",
+          "#e8e9eb"
+        ]
+      },
+      "stop-red": {
+        "role": "primary",
+        "displayName": "Stop Red",
+        "canonical": "#e0242c",
+        "tonalRamp": [
+          "#3a0a0d",
+          "#5f1015",
+          "#8a161c",
+          "#bd1c23",
+          "#e0242c",
+          "#f03039",
+          "#ff5258",
+          "#ffb3b6"
+        ]
+      },
+      "stop-red-text": {
+        "role": "primary",
+        "displayName": "Stop Red Text",
+        "canonical": "#ff5258",
+        "tonalRamp": [
+          "#3a0a0d",
+          "#5f1015",
+          "#8a161c",
+          "#bd1c23",
+          "#e0242c",
+          "#f03039",
+          "#ff5258",
+          "#ffb3b6"
+        ]
+      },
+      "stop-red-hover": {
+        "role": "primary",
+        "displayName": "Stop Red Hover",
+        "canonical": "#f03039",
+        "tonalRamp": [
+          "#3a0a0d",
+          "#5f1015",
+          "#8a161c",
+          "#bd1c23",
+          "#e0242c",
+          "#f03039",
+          "#ff5258",
+          "#ffb3b6"
+        ]
+      },
+      "stop-red-pressed": {
+        "role": "primary",
+        "displayName": "Stop Red Pressed",
+        "canonical": "#bd1c23",
+        "tonalRamp": [
+          "#3a0a0d",
+          "#5f1015",
+          "#8a161c",
+          "#bd1c23",
+          "#e0242c",
+          "#f03039",
+          "#ff5258",
+          "#ffb3b6"
+        ]
+      },
+      "on-red": {
+        "role": "neutral",
+        "displayName": "On Red",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#2a2d33",
+          "#4a4d55",
+          "#9a9da3",
+          "#c9cbcf",
+          "#e8e9eb",
+          "#f2f3f4",
+          "#fafafa",
+          "#ffffff"
+        ]
+      },
+      "soft-white": {
+        "role": "neutral",
+        "displayName": "Soft White",
+        "canonical": "#c9cbcf",
+        "tonalRamp": [
+          "#2a2d33",
+          "#4a4d55",
+          "#5b5e66",
+          "#7b7e85",
+          "#9a9da3",
+          "#b5b8bc",
+          "#c9cbcf",
+          "#e8e9eb"
+        ]
+      },
+      "outline-grey": {
+        "role": "neutral",
+        "displayName": "Outline Grey",
+        "canonical": "#5b5e66",
+        "tonalRamp": [
+          "#2a2d33",
+          "#4a4d55",
+          "#5b5e66",
+          "#7b7e85",
+          "#9a9da3",
+          "#b5b8bc",
+          "#c9cbcf",
+          "#e8e9eb"
+        ]
+      },
+      "scrollbar-grey": {
+        "role": "neutral",
+        "displayName": "Scrollbar Grey",
+        "canonical": "#2a2d33",
+        "tonalRamp": [
+          "#050506",
+          "#0d0e10",
+          "#16181c",
+          "#2a2d33",
+          "#4a4d55",
+          "#9a9da3",
+          "#e8e9eb",
+          "#f6f7f8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only, light (250), sentence case; clamp 2.5-4.5rem mobile, 3.5-5.5rem from 800px."
+      },
+      "headline": {
+        "displayName": "Section title",
+        "purpose": "All H2: Archivo wdth 62%, weight 800, uppercase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3 and step numerals, same condensed heavy voice."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Light Archivo 300, tabular figures for numbers."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small uppercase tracked captions and segmented options."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-active-underline",
+        "value": "inset 0 -2px 0 var(--color-red)",
+        "purpose": "2px red underline on the aria-current navbar link. The only shadow; surfaces carry none."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Ease-out expo for all transitions."
+      },
+      {
+        "name": "flip",
+        "value": "0.42s var(--ease), 55ms stagger per changed digit, total under 800ms",
+        "purpose": "Split-flap price; disabled under prefers-reduced-motion; real text in .sr-only."
+      },
+      {
+        "name": "switch",
+        "value": "0.3s thumb, 0.25s colour",
+        "purpose": "Extra toggles."
+      },
+      {
+        "name": "bar-slide",
+        "value": "0.4s translateY",
+        "purpose": "Mobile bottom bar entrance; off under reduced motion."
+      },
+      {
+        "name": "nav-scrolled",
+        "value": "0.3s background and border colour",
+        "purpose": "Navbar turns solid with grain once scrolled; active link scrolls into view on mobile (auto under reduced motion)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "520px"
+      },
+      {
+        "name": "md",
+        "value": "800px"
+      },
+      {
+        "name": "lg",
+        "value": "900px"
+      }
+    ],
+    "grain": {
+      "asset": "public/grano-fino.png (128x128 alpha, used as given)",
+      "variables": "--grano, --grano-tam: 128px",
+      "class": ".con-grano",
+      "applies": "body, navbar once scrolled, vehicle bar, mobile bar",
+      "never": "hero, photos, panels, buttons, map",
+      "intensity": "one only",
+      "contrast": "muted text 6.68:1, main text 14.9:1, red text 5.7:1 on grain"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Red square call to action.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Pedí tu turno</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:0 1.75rem;background:#e0242c;color:#fff;border:1px solid #e0242c;border-radius:0;font:700 .9375rem 'Archivo Variable',system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background-color .2s cubic-bezier(.16,1,.3,1)}.ds-btn:hover{background:#f03039;border-color:#f03039}.ds-btn:active{background:#bd1c23}.ds-btn:focus-visible{outline:2px solid #ff5258;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined secondary action for maintenance plans.",
+      "html": "<a class=\"ds-ghost\" href=\"#\">Consultar</a>",
+      "css": ".ds-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:0 1.75rem;background:transparent;color:#e8e9eb;border:1px solid #e8e9eb;border-radius:0;font:700 .8125rem 'Archivo Variable',system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background-color .2s}.ds-ghost:hover{background:#e8e9eb;color:#050506}.ds-ghost:focus-visible{outline:2px solid #ff5258;outline-offset:3px}"
+    },
+    {
+      "name": "Navbar Link",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Fixed navbar link; active section gets a 2px Stop Red underline via aria-current.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"true\">Servicios</a><a href=\"#\">Trabajos</a><a href=\"#\">Reservas</a></nav>",
+      "css": ".ds-nav{display:flex;gap:.25rem;height:3.5rem;padding-inline:1rem;background:#050506;border-bottom:1px solid rgb(255 255 255/.14);overflow-x:auto}.ds-nav a{display:block;padding:0 .85rem;line-height:3.5rem;font:500 .8125rem 'Archivo Variable',system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:#c9cbcf;box-shadow:inset 0 -2px 0 transparent;transition:color .2s,box-shadow .3s}.ds-nav a:hover{color:#e8e9eb}.ds-nav a[aria-current=true]{color:#e8e9eb;box-shadow:inset 0 -2px 0 #e0242c}.ds-nav a:focus-visible{outline:2px solid #ff5258;outline-offset:-3px}"
+    },
+    {
+      "name": "Vehicle Selector",
+      "kind": "chip",
+      "refersTo": "segmented-option-selected",
+      "description": "Two-option segmented control for Auto or Camioneta.",
+      "html": "<div class=\"ds-seg\"><button aria-checked=\"true\">Auto</button><button aria-checked=\"false\">Camioneta</button></div>",
+      "css": ".ds-seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgb(255 255 255/.14);min-width:17rem}.ds-seg button{min-height:2.75rem;background:transparent;color:#e8e9eb;border:0;font:600 .8125rem 'Archivo Variable',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.ds-seg button+button{border-left:1px solid rgb(255 255 255/.14)}.ds-seg button[aria-checked=true]{background:#e8e9eb;color:#050506}.ds-seg button:not([aria-checked=true]):hover{background:#16181c}.ds-seg button:focus-visible{outline:2px solid #ff5258;outline-offset:-3px}"
+    },
+    {
+      "name": "Extra Switch Row",
+      "kind": "custom",
+      "refersTo": "switch",
+      "description": "Hairline option row with square switch, description and price.",
+      "html": "<button class=\"ds-row\" aria-checked=\"true\"><span class=\"ds-sw\"><span class=\"ds-th\"></span></span><span><b>Cera sellante</b><br><small>Protección extra</small></span><span>+$12.000</span></button>",
+      "css": ".ds-row{display:grid;grid-template-columns:2.75rem 1fr auto;align-items:center;gap:.75rem;width:100%;min-height:4.5rem;padding:.9rem 0;border:0;border-bottom:1px solid rgb(255 255 255/.14);background:transparent;color:#e8e9eb;font:300 1rem 'Archivo Variable',system-ui,sans-serif;text-align:left;cursor:pointer}.ds-row b{font-weight:600}.ds-row small{color:#9a9da3}.ds-row:hover{background:rgb(255 255 255/.035)}.ds-sw{position:relative;display:block;width:2.75rem;height:1.5rem;border:1px solid #e0242c;background:#e0242c}.ds-th{position:absolute;top:2px;left:2px;width:1.1rem;height:calc(1.5rem - 6px);background:#fff;transform:translateX(1.2rem)}.ds-row:focus-visible{outline:2px solid #ff5258;outline-offset:-3px}"
+    },
+    {
+      "name": "Split-flap Price",
+      "kind": "custom",
+      "refersTo": "flap-cell",
+      "description": "Per-digit tiles that flip when the value changes; real text kept for screen readers.",
+      "html": "<span class=\"ds-price\"><span class=\"ds-flaps\" aria-hidden=\"true\"><span class=\"ds-cell\">$</span><span class=\"ds-cell\">3</span><span class=\"ds-cell\">0</span><span class=\"ds-cell\">.</span><span class=\"ds-cell\">0</span><span class=\"ds-cell\">0</span><span class=\"ds-cell\">0</span></span></span>",
+      "css": ".ds-price{font:700 2.5rem 'Archivo Variable',system-ui,sans-serif;font-variant-numeric:tabular-nums;color:#e8e9eb;white-space:nowrap}.ds-flaps{display:inline-flex}.ds-cell{position:relative;display:inline-block;width:.66em;height:1.3em;margin-inline:1px;background:#16181c;border-radius:2px;overflow:hidden;text-align:center;line-height:1.3em}.ds-cell::after{content:'';position:absolute;inset:50% 0 auto;height:1px;background:rgb(0 0 0/.7)}"
+    },
+    {
+      "name": "Summary Panel",
+      "kind": "card",
+      "refersTo": "summary-panel",
+      "description": "Sticky order summary with itemised list and total.",
+      "html": "<aside class=\"ds-sum\"><h3>Tu pedido</h3><p class=\"ds-cap\">Auto</p><div class=\"ds-line\"><span>Lavado</span><span>$30.000</span></div><a class=\"ds-btn\" href=\"#\">Pedir por WhatsApp</a></aside>",
+      "css": ".ds-sum{border:1px solid rgb(255 255 255/.14);background:#0d0e10;padding:1.5rem;color:#e8e9eb;font-family:'Archivo Variable',system-ui,sans-serif;font-weight:300}.ds-sum h3{margin:0;font-weight:800;font-stretch:62%;text-transform:uppercase;font-size:1.75rem;line-height:.95;letter-spacing:.01em}.ds-cap{margin:.4rem 0 1rem;color:#9a9da3;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}.ds-line{display:flex;justify-content:space-between;padding:.6rem 0;border-top:1px solid rgb(255 255 255/.14);border-bottom:1px solid rgb(255 255 255/.14);margin-bottom:1.25rem}.ds-sum .ds-btn{display:flex;width:100%;min-height:3.25rem;align-items:center;justify-content:center;background:#e0242c;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.06em;text-transform:uppercase}"
+    },
+    {
+      "name": "Gallery Placeholder",
+      "kind": "custom",
+      "refersTo": "summary-panel",
+      "description": "Temporary empty dashed tile until real photos arrive.",
+      "html": "<div class=\"ds-ph\"><span>Foto próximamente</span></div>",
+      "css": ".ds-ph{display:grid;place-items:end start;aspect-ratio:4/5;padding:.9rem;border:1px dashed #5b5e66;background:#0d0e10}.ds-ph span{font:500 .75rem 'Archivo Variable',system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9a9da3}"
+    },
+    {
+      "name": "Location Band",
+      "kind": "custom",
+      "refersTo": "summary-panel",
+      "description": "Notice plus full-width dark-filtered map iframe; no grain.",
+      "html": "<div class=\"ds-map\"><p>Atendemos únicamente con cita previa</p><div class=\"ds-mapbox\"></div></div>",
+      "css": ".ds-map{color:#e8e9eb;font-family:'Archivo Variable',system-ui,sans-serif}.ds-map p{margin:0 0 1.5rem;font-weight:600;font-size:1.125rem}.ds-mapbox{height:14rem;border-block:1px solid rgb(255 255 255/.14);background:#0d0e10}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El configurador",
+    "overview": "A studio at night with one car lit. The page is a premium configurator: the visitor picks Auto or Camioneta, adds extras to an already included wash, and the total and the WhatsApp message assemble live. The build is code-led (seed:ee9b98310585b7e6). A fixed scrollspy navbar and a closing map band frame the page. Studio black, panel grey, cold white, secondary grey and the red of a brake light as the only accent, divided by 1px hairlines instead of cards. Section titles are condensed bold uppercase Archivo (wdth 62%, weight 800); everything else is light Archivo with tabular figures. The only decorative motion is the split-flap price.",
+    "keyCharacteristics": [
+      "Dark only; red is the single accent and is rare.",
+      "Hairline (1px) rules separate rows, plans, steps; no card grid for services.",
+      "Square corners everywhere except the 2px flap cells.",
+      "Condensed heavy headings against a light body.",
+      "Every color is a token in one `@theme static` block; no raw hex in components (the single exception is the `theme-color` meta tag, which cannot read CSS variables).",
+      "Fine film grain on page-level chrome surfaces only, one intensity.",
+      "Real photography of the owner's work; the hero is the only AI-retouched image."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Red is the only accent. It marks action (buttons), state (switch on, check) and sequence (step numbers). It never decorates headings or backgrounds.",
+        "section": "colors"
+      },
+      {
+        "name": "The Text-Red Rule",
+        "body": "Red used as text, icon or focus outline is Stop Red Text, never Stop Red. The one exception is the 2px active-link underline in the navbar, which is Stop Red (a line, not text).",
+        "section": "colors"
+      },
+      {
+        "name": "The Token-Only Rule",
+        "body": "Colors are declared once in `@theme static` in `src/styles/global.css`. Components reference tokens; overlays derive from tokens with `color-mix`.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grain Rule",
+        "body": "Grain is applied with `.con-grano` at one intensity only, on the body, the navbar once scrolled, the vehicle bar and the mobile bar. Never on the hero, photos, panels, buttons or the map. Worst-case contrast on grain: muted 6.68:1, main 14.9:1, red text 5.7:1.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width-Is-Hierarchy Rule",
+        "body": "Titles are condensed (wdth 62%) heavy uppercase; nothing else is condensed except step numerals. Body never leaves wdth 100%.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every price and number uses tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-With-Hairlines Rule",
+        "body": "Separation is a 1px Line rule or a tonal step. No drop shadows, no glows. Surface texture comes from grain, not from shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep Stop Red as the only accent and use Stop Red Text (#ff5258) whenever red is text, icon or outline.",
+      "Do set section titles in Archivo wdth 62%, weight 800, uppercase; body in weight 300.",
+      "Do separate content with 1px Line rules and tonal panel steps.",
+      "Do keep prices in tabular figures and animate changes with the staggered split-flap, under 800ms, respecting reduced motion with real text in `.sr-only`.",
+      "Do declare every color as a token in `@theme static` and derive scrims with `color-mix` from the bg token.",
+      "Do apply grain only through `.con-grano` on the listed chrome surfaces, at one intensity.",
+      "Do keep corners square (0) except flap cells (2px).",
+      "Do use real photography of the owner's work; mark any retouched raster with its provenance."
+    ],
+    "donts": [
+      "Don't return to a grid of service cards with a generic WhatsApp button; the configurator is the structure.",
+      "Don't put panels or cards over the hero photo; type sits on scrims only.",
+      "Don't add drop shadows, glows or a second accent hue.",
+      "Don't use a condensed face for body text or sentence-case condensed titles.",
+      "Don't invent reviews, client counts, guarantees or superlatives (PRODUCT.md).",
+      "Don't treat the provisional logo or the dashed gallery placeholders as final identity.",
+      "Don't write raw hex or rgb colors in components or add a grain intensity; extend the tokens instead.",
+      "Don't put grain on the hero, photos, panels, buttons or the map.",
+      "Don't name the owner anywhere in public-facing copy or labels."
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+---
+import { copy, messages, waLink } from '../data/business';
+import { base, formatARS } from '../data/services';
+
+const configHref = waLink(messages.config([base.short], 'auto'));
+---
+
+<div class="bar con-grano" data-bar>
+	<div class="bar-total" aria-hidden="true"><span>{copy.configurator.totalLabel}</span><span class="price" data-total>{formatARS(base.price.auto)}</span></div>
+	<a class="btn" href={configHref} data-wa="config" rel="noopener">{copy.configurator.send}</a>
+</div>

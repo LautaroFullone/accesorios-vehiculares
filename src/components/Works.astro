@@ -1,0 +1,23 @@
+---
+import { copy } from '../data/business';
+---
+
+<section id="trabajos" class="section works" aria-labelledby="works-title">
+	<h2 id="works-title">{copy.works.title}</h2>
+	<div class="works-grid">
+		<figure class="frame ba">
+			<div class="ba-pair">
+				<div class="ph" role="img" aria-label={`${copy.works.before}: ${copy.works.placeholder}`}><span>{copy.works.before}</span></div>
+				<div class="ph" role="img" aria-label={`${copy.works.after}: ${copy.works.placeholder}`}><span>{copy.works.after}</span></div>
+			</div>
+		</figure>
+		{[0, 1, 2].map((i) => {
+			const photo = copy.works.photos[i];
+			return photo ? (
+				<figure class="frame"><img src={photo.src} alt={photo.alt} loading="lazy" /></figure>
+			) : (
+				<figure class="frame"><div class="ph" role="img" aria-label={copy.works.placeholder}><span>{copy.works.placeholder}</span></div></figure>
+			);
+		})}
+	</div>
+</section>

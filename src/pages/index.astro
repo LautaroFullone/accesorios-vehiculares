@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/archivo/wdth.css';
+import '../styles/global.css';
+import { copy } from '../data/business';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Booking from '../components/Booking.astro';
+import Configurator from '../components/Configurator.astro';
+import Works from '../components/Works.astro';
+import Maintenance from '../components/Maintenance.astro';
+import Closing from '../components/Closing.astro';
+import Location from '../components/Location.astro';
+import Footer from '../components/Footer.astro';
+import VariantSwitch from '../components/VariantSwitch.astro';
+import StickyBar from '../components/StickyBar.astro';
+---
+
+<html lang="es-AR">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#050506" />
+		<meta name="description" content={copy.description} />
+		<title>{copy.title}</title>
+		<link rel="preload" as="image" href="/hero-bmw-x2-mobile.webp" media="(max-width: 799px)" />
+		<link rel="preload" as="image" href="/hero-bmw-x2-desktop.webp" media="(min-width: 800px)" />
+	</head>
+	<body class="con-grano">
+		<Header />
+
+		<main>
+			<Hero />
+			<Booking />
+			<div class="catalog">
+				<Configurator />
+			</div>
+			<Works />
+			<div class="catalog">
+				<Maintenance />
+			</div>
+			<Closing />
+			<Location />
+		</main>
+
+		<Footer />
+		<VariantSwitch />
+		<StickyBar />
+
+		<script>
+			import '../scripts/configurator';
+			import '../scripts/nav';
+			import '../scripts/variants';
+		</script>
+	</body>
+</html>

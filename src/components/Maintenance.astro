@@ -1,0 +1,32 @@
+---
+import VehicleBar from './VehicleBar.astro';
+import { copy, messages, waLink } from '../data/business';
+import { maintenance, formatARS } from '../data/services';
+
+const planHref = (ask: string) => waLink(messages.plan(ask, 'auto'));
+---
+
+<section id="mantenimiento" class="section" aria-labelledby="mnt-title">
+	<h2 id="mnt-title">{copy.maintenance.title}</h2>
+	<p class="lede">{copy.maintenance.intro}</p>
+</section>
+
+<VehicleBar id="mnt" context="mantenimiento" />
+
+<div class="section plans-wrap">
+	<ul class="plans">
+		{maintenance.map((p) => (
+			<li class="plan">
+				<div class="row-text">
+					<span class="row-name">{p.name}</span>
+					<span class="row-desc">{p.description}</span>
+				</div>
+				<div class="plan-price">
+					<span class="price" data-price data-auto={p.price.auto} data-camioneta={p.price.camioneta}>{formatARS(p.price.auto)}</span>
+					<span class="per">{copy.maintenance.perWash}</span>
+				</div>
+				<a class="btn ghost" href={planHref(p.ask)} data-wa={`plan:${p.id}`} rel="noopener">{copy.maintenance.cta}</a>
+			</li>
+		))}
+	</ul>
+</div>

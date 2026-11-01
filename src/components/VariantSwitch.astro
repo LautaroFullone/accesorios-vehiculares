@@ -1,0 +1,14 @@
+---
+// Selector temporal para comparar versiones del cierre; se quita al elegir
+---
+
+<div class="variant-switch" role="group" aria-label="Versiones (temporal)">
+	<div class="variant-row" data-variant-group="cierre">
+		<span>Cierre</span>
+		<div class="seg" role="radiogroup" aria-label="Versión del cierre">
+			{['a', 'b', 'c'].map((v, i) => (
+				<button type="button" role="radio" aria-checked={i === 0 ? 'true' : 'false'} data-variant-value={v}>{v.toUpperCase()}</button>
+			))}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+---
+import { copy } from '../data/business';
+---
+
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+	<picture>
+		<source media="(min-width: 800px)" srcset="/hero-bmw-x2-desktop.webp" width="3072" height="2048" />
+		<img
+			src="/hero-bmw-x2-mobile.webp"
+			width="2048"
+			height="3072"
+			alt="Parte trasera de un BMW negro mojado, con las ópticas traseras encendidas, en un garaje oscuro."
+			fetchpriority="high"
+		/>
+	</picture>
+	<div class="hero-copy">
+		<h1 id="hero-title">{copy.hero.headline}</h1>
+		<p class="hero-sub">{copy.hero.subtitle}</p>
+		<a class="btn" href="#configurador">
+			{copy.hero.cta}
+			<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v11M3 8.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+		</a>
+	</div>
+</section>

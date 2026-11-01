@@ -1,0 +1,25 @@
+---
+import externalLink from 'lucide-static/icons/external-link.svg?raw';
+import whatsapp from 'simple-icons/icons/whatsapp.svg?raw';
+import instagram from 'simple-icons/icons/instagram.svg?raw';
+
+const icons = { externalLink, whatsapp, instagram };
+const brands = new Set(['whatsapp', 'instagram']);
+
+interface Props {
+	name: keyof typeof icons;
+	class?: string;
+	strokeWidth?: number;
+}
+
+const { name, class: className = 'icon', strokeWidth = 1.75 } = Astro.props;
+let svg = icons[name]
+	.replace(/<!--[\s\S]*?-->/g, '')
+	.replace(/<svg[^>]*>/, (tag) => tag.replace(/\s(width|height|class)="[^"]*"/g, ''))
+	.replace('<svg', `<svg class="${className}" aria-hidden="true" focusable="false"`);
+svg = brands.has(name)
+	? svg.replace('<svg', '<svg fill="currentColor"').replace(/<title>.*?<\/title>/, '')
+	: svg.replace(/stroke-width="[^"]*"/, `stroke-width="${strokeWidth}"`);
+---
+
+<Fragment set:html={svg} />

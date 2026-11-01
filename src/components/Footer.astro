@@ -1,0 +1,56 @@
+---
+import Icon from './Icon.astro';
+import FooterColumns from './FooterColumns.astro';
+import { business, copy } from '../data/business';
+
+const year = new Date().getFullYear();
+
+// Crédito del desarrollador (no es contenido del lavadero). El número vive en una variable pública:
+// PUBLIC_CONTACTO_DEV (solo dígitos, con código de país).
+const devWhatsapp = import.meta.env.PUBLIC_CONTACTO_DEV || '5492236801937';
+const devMensaje = encodeURIComponent(
+	'Hola Lautaro, vi la página de Accesorios Vehiculares MdP y me gustaría una para mi negocio.',
+);
+const devWeb = 'https://lautarofullone.dev';
+
+---
+
+<footer class="foot con-grano">
+	<div class="foot-in">
+		<div class="foot-grid">
+			<!-- Datos de contacto en texto plano -->
+			<address class="foot-data">
+				<p class="foot-data-name">{business.contact.name}</p>
+				{business.contact.email && (
+					<p><a href={`mailto:${business.contact.email}`} class="ix-link">{business.contact.email}</a></p>
+				)}
+				<p><a href={business.contact.phoneHref} class="ix-link">{business.contact.phone}</a></p>
+				<p>{business.contact.place}</p>
+			</address>
+			<FooterColumns />
+		</div>
+
+		<!-- Crédito del desarrollador (no es contenido del lavadero) -->
+		<div class="foot-credit">
+			<p class="foot-rights">{copy.footer.rights} © {year}</p>
+			<div class="credit-links">
+				<p>
+					¿Te gustaría una página como esta?{' '}
+					<a href={`https://wa.me/${devWhatsapp}?text=${devMensaje}`} target="_blank" rel="noopener" class="credito-venta">
+						<em class="ix-link">Hagamos la tuya.</em>
+						<Icon name="whatsapp" class="icon icon-sm ix-flecha" />
+						<span class="sr-only">(se abre en una pestaña nueva)</span>
+					</a>
+				</p>
+				<a href={devWeb} target="_blank" rel="noopener" class="credito-firma">
+					<span>Creado por <span class="credito-nombre">Lautaro Fullone</span></span>
+					<Icon name="externalLink" class="icon icon-sm ix-flecha" strokeWidth={2} />
+					<span class="sr-only">(se abre en una pestaña nueva)</span>
+				</a>
+			</div>
+		</div>
+
+		<!-- El nombre, una sola vez, a ancho completo; la base de las letras queda cortada por el borde inferior -->
+		<p class="foot-name" aria-hidden="true"><span>{business.name}</span></p>
+	</div>
+</footer>

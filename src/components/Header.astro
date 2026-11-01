@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+import { business, copy } from '../data/business';
+---
+
+<header class="nav" data-nav>
+	<a class="brand" href="#inicio" aria-label={`${business.name}, inicio`}>
+		<img src={business.logo.src} alt="" width="64" height="64" />
+	</a>
+	<nav aria-label={copy.nav.label}>
+		<ul>
+			{copy.nav.links.map((l) => (
+				<li><a href={l.href}>{l.label}</a></li>
+			))}
+		</ul>
+	</nav>
+	<a class="ig" href={business.instagram.url} rel="noopener" aria-label={`Instagram ${business.instagram.handle}`}>
+		<Icon name="instagram" class="icon icon-ig" />
+	</a>
+</header>

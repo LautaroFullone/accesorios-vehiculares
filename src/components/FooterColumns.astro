@@ -1,0 +1,35 @@
+---
+import { business, copy, messages, waLink } from '../data/business';
+import { base, extras } from '../data/services';
+
+const waGeneral = waLink(messages.general);
+const servicios = [base, ...extras].map((s) => s.name);
+const link = 'ix-link inline-link';
+---
+
+<div class="foot-cols">
+	<nav aria-labelledby="pie-nav">
+		<h2 id="pie-nav">{copy.footer.siteTitle}</h2>
+		<ul>
+			{copy.nav.links.map((n) => (
+				<li><a href={n.href} class={link}>{n.label}</a></li>
+			))}
+		</ul>
+	</nav>
+	<div>
+		<h2>{copy.footer.servicesTitle}</h2>
+		<ul>
+			{servicios.map((name) => (
+				<li><a href="#configurador" class={link}>{name}</a></li>
+			))}
+			<li><a href="#mantenimiento" class={link}>{copy.maintenance.title}</a></li>
+		</ul>
+	</div>
+	<div>
+			<h2>{copy.footer.contactTitle}</h2>
+			<ul>
+				<li><a href={waGeneral} target="_blank" rel="noopener" class={link}>WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+				<li><a href={business.instagram.url} target="_blank" rel="noopener" class={link}>Instagram<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+			</ul>
+	</div>
+</div>

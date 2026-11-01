@@ -1,0 +1,12 @@
+---
+import { copy } from '../data/business';
+---
+
+<section id="reservas" class="section booking" aria-labelledby="book-title">
+	<h2 id="book-title">{copy.booking.title}</h2>
+	<ol class="steps">
+		{copy.booking.steps.map((s, i) => (
+			<li><span class="step-n" aria-hidden="true">{i + 1}</span><span>{s}</span></li>
+		))}
+	</ol>
+</section>

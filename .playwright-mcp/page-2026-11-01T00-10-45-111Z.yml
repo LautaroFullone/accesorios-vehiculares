@@ -1,0 +1,294 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - link "Accesorios Vehiculares MdP, inicio" [ref=f5e3] [cursor=pointer]:
+      - /url: "#inicio"
+    - navigation "Secciones" [ref=f5e4]:
+      - list [ref=f5e5]:
+        - listitem [ref=f5e6]:
+          - link "Cómo reservar" [ref=f5e7] [cursor=pointer]:
+            - /url: "#reservas"
+        - listitem [ref=f5e8]:
+          - link "Armá tu lavado" [ref=f5e9] [cursor=pointer]:
+            - /url: "#configurador"
+        - listitem [ref=f5e10]:
+          - link "Trabajos" [ref=f5e11] [cursor=pointer]:
+            - /url: "#trabajos"
+        - listitem [ref=f5e12]:
+          - link "Mantenimiento" [ref=f5e13] [cursor=pointer]:
+            - /url: "#mantenimiento"
+        - listitem [ref=f5e14]:
+          - link "Ubicación" [ref=f5e15] [cursor=pointer]:
+            - /url: "#ubicacion"
+    - link "Instagram @accesoriosvehicularesmdp" [ref=f5e16] [cursor=pointer]:
+      - /url: https://www.instagram.com/accesoriosvehicularesmdp/
+  - main [ref=f5e19]:
+    - region [ref=f5e20]:
+      - img "Parte trasera de un BMW negro mojado, con las ópticas traseras encendidas, en un garaje oscuro." [ref=f5e22]
+      - generic [ref=f5e23]:
+        - heading "Que vuelva a verse como el primer día." [level=1] [ref=f5e24]
+        - paragraph [ref=f5e25]: Lavado, sellador cerámico y mantenimiento para autos que se cuidan. Armá tu servicio y reservá tu turno por WhatsApp.
+        - paragraph [ref=f5e26]:
+          - text: Lavado desde
+          - strong [ref=f5e27]: $30.000
+          - generic [ref=f5e28]: Atención solo con turno previo
+        - link "Pedí tu turno" [ref=f5e29] [cursor=pointer]:
+          - /url: "#configurador"
+    - region [ref=f5e32]:
+      - heading "Cómo se reserva" [level=2] [ref=f5e33]
+      - list [ref=f5e34]:
+        - listitem [ref=f5e35]:
+          - generic [aria-hidden] [ref=f5e36]: "1"
+          - generic [ref=f5e37]: Armás tu lavado.
+        - listitem [ref=f5e38]:
+          - generic [aria-hidden] [ref=f5e39]: "2"
+          - generic [ref=f5e40]: Mandás el WhatsApp.
+        - listitem [ref=f5e41]:
+          - generic [aria-hidden] [ref=f5e42]: "3"
+          - generic [ref=f5e43]: Te confirmamos tu turno.
+    - generic [ref=f5e44]:
+      - region [ref=f5e45]:
+        - heading "Configurá el cuidado de tu auto" [level=2] [ref=f5e46]
+      - generic [ref=f5e48]:
+        - generic [aria-hidden] [ref=f5e49]: Tu vehículo
+        - radiogroup "Tu vehículo, configurador" [ref=f5e50]:
+          - radio "Auto" [checked] [ref=f5e51] [cursor=pointer]
+          - radio "Camioneta" [ref=f5e52] [cursor=pointer]
+      - generic [ref=f5e53]:
+        - generic [ref=f5e54]:
+          - generic [ref=f5e55]:
+            - generic [ref=f5e58]:
+              - generic [ref=f5e59]: Lavado tradicional Incluido
+              - generic [ref=f5e60]: Base de todos los turnos.
+            - generic [ref=f5e61]:
+              - generic [ref=f5e62]: $30.000
+              - generic [aria-hidden] [ref=f5e63]:
+                - generic [ref=f5e64]: $
+                - generic [ref=f5e65]: "3"
+                - generic [ref=f5e67]: "0"
+                - generic [ref=f5e69]: .
+                - generic [ref=f5e70]: "0"
+                - generic [ref=f5e72]: "0"
+                - generic [ref=f5e74]: "0"
+          - switch "Lavado de motor Lavado y acondicionado del motor. +$10.000" [ref=f5e76] [cursor=pointer]:
+            - generic [ref=f5e79]:
+              - generic [ref=f5e80]: Lavado de motor
+              - generic [ref=f5e81]: Lavado y acondicionado del motor.
+            - generic [ref=f5e82]:
+              - generic [ref=f5e83]: +$10.000
+              - generic [aria-hidden] [ref=f5e84]:
+                - generic [ref=f5e85]: +
+                - generic [ref=f5e86]: $
+                - generic [ref=f5e87]: "1"
+                - generic [ref=f5e89]: "0"
+                - generic [ref=f5e91]: .
+                - generic [ref=f5e92]: "0"
+                - generic [ref=f5e94]: "0"
+                - generic [ref=f5e96]: "0"
+          - switch "Plásticos Limpieza y acondicionado de plásticos. +$5.000" [ref=f5e98] [cursor=pointer]:
+            - generic [ref=f5e101]:
+              - generic [ref=f5e102]: Plásticos
+              - generic [ref=f5e103]: Limpieza y acondicionado de plásticos.
+            - generic [ref=f5e104]:
+              - generic [ref=f5e105]: +$5.000
+              - generic [aria-hidden] [ref=f5e106]:
+                - generic [ref=f5e107]: +
+                - generic [ref=f5e108]: $
+                - generic [ref=f5e109]: "5"
+                - generic [ref=f5e111]: .
+                - generic [ref=f5e112]: "0"
+                - generic [ref=f5e114]: "0"
+                - generic [ref=f5e116]: "0"
+          - switch "Sellador cerámico Aplicación de sellador cerámico. +$30.000" [ref=f5e118] [cursor=pointer]:
+            - generic [ref=f5e121]:
+              - generic [ref=f5e122]: Sellador cerámico
+              - generic [ref=f5e123]: Aplicación de sellador cerámico.
+            - generic [ref=f5e124]:
+              - generic [ref=f5e125]: +$30.000
+              - generic [aria-hidden] [ref=f5e126]:
+                - generic [ref=f5e127]: +
+                - generic [ref=f5e128]: $
+                - generic [ref=f5e129]: "3"
+                - generic [ref=f5e131]: "0"
+                - generic [ref=f5e133]: .
+                - generic [ref=f5e134]: "0"
+                - generic [ref=f5e136]: "0"
+                - generic [ref=f5e138]: "0"
+        - complementary [ref=f5e140]:
+          - heading "Tu configuración" [level=3] [ref=f5e141]
+          - paragraph [ref=f5e142]: Auto
+          - list [ref=f5e143]:
+            - listitem [ref=f5e144]:
+              - generic [ref=f5e145]: Lavado tradicional
+              - generic [ref=f5e146]: $30.000
+          - generic [ref=f5e147]:
+            - generic [ref=f5e148]: Total estimado
+            - status [ref=f5e149]:
+              - generic [ref=f5e150]: $30.000
+              - generic [aria-hidden] [ref=f5e151]:
+                - generic [ref=f5e152]: $
+                - generic [ref=f5e153]: "3"
+                - generic [ref=f5e155]: "0"
+                - generic [ref=f5e157]: .
+                - generic [ref=f5e158]: "0"
+                - generic [ref=f5e160]: "0"
+                - generic [ref=f5e162]: "0"
+          - link "Enviar por WhatsApp" [ref=f5e164] [cursor=pointer]:
+            - /url: https://wa.me/5492235385974?text=Hola%20Rama!%20Vi%20la%20web%20y%20quiero%20turno%20para%3A%20Lavado%20tradicional%20(auto).%20%C2%BFQu%C3%A9%20d%C3%ADas%20ten%C3%A9s%3F
+          - paragraph [ref=f5e165]: Total estimado. Te confirmamos el turno por WhatsApp.
+    - region [ref=f5e166]:
+      - heading "Tu auto merece brillar así." [level=2] [ref=f5e167]
+      - generic [ref=f5e168]:
+        - figure [ref=f5e169]:
+          - generic [ref=f5e170]:
+            - 'img "Antes: Foto del trabajo" [ref=f5e171]':
+              - generic [ref=f5e172]: Antes
+            - 'img "Después: Foto del trabajo" [ref=f5e173]':
+              - generic [ref=f5e174]: Después
+        - figure [ref=f5e175]:
+          - img "Foto del trabajo" [ref=f5e176]
+        - figure [ref=f5e178]:
+          - img "Foto del trabajo" [ref=f5e179]
+        - figure [ref=f5e181]:
+          - img "Foto del trabajo" [ref=f5e182]
+    - generic [ref=f5e184]:
+      - region [ref=f5e185]:
+        - heading "Mantenimiento" [level=2] [ref=f5e186]
+        - paragraph [ref=f5e187]: Para el que lava seguido. Precio por lavado.
+      - generic [ref=f5e189]:
+        - generic [aria-hidden] [ref=f5e190]: Tu vehículo
+        - radiogroup "Tu vehículo, mantenimiento" [ref=f5e191]:
+          - radio "Auto" [checked] [ref=f5e192] [cursor=pointer]
+          - radio "Camioneta" [ref=f5e193] [cursor=pointer]
+      - list [ref=f5e195]:
+        - listitem [ref=f5e196]:
+          - generic [ref=f5e197]:
+            - generic [ref=f5e198]: Mantenimiento semanal
+            - generic [ref=f5e199]: Un lavado por semana.
+          - generic [ref=f5e200]:
+            - generic [ref=f5e201]:
+              - generic [ref=f5e202]: $24.000
+              - generic [aria-hidden] [ref=f5e203]:
+                - generic [ref=f5e204]: $
+                - generic [ref=f5e205]: "2"
+                - generic [ref=f5e207]: "4"
+                - generic [ref=f5e209]: .
+                - generic [ref=f5e210]: "0"
+                - generic [ref=f5e212]: "0"
+                - generic [ref=f5e214]: "0"
+            - generic [ref=f5e216]: por lavado
+          - link "Quiero este plan" [ref=f5e217] [cursor=pointer]:
+            - /url: https://wa.me/5492235385974?text=Hola%20Rama!%20Vi%20la%20web%20y%20quiero%20arrancar%20el%20mantenimiento%20semanal%20(auto).%20%C2%BFQu%C3%A9%20d%C3%ADas%20ten%C3%A9s%3F
+        - listitem [ref=f5e218]:
+          - generic [ref=f5e219]:
+            - generic [ref=f5e220]: Mantenimiento quincenal
+            - generic [ref=f5e221]: Un lavado cada dos semanas.
+          - generic [ref=f5e222]:
+            - generic [ref=f5e223]:
+              - generic [ref=f5e224]: $26.000
+              - generic [aria-hidden] [ref=f5e225]:
+                - generic [ref=f5e226]: $
+                - generic [ref=f5e227]: "2"
+                - generic [ref=f5e229]: "6"
+                - generic [ref=f5e231]: .
+                - generic [ref=f5e232]: "0"
+                - generic [ref=f5e234]: "0"
+                - generic [ref=f5e236]: "0"
+            - generic [ref=f5e238]: por lavado
+          - link "Quiero este plan" [ref=f5e239] [cursor=pointer]:
+            - /url: https://wa.me/5492235385974?text=Hola%20Rama!%20Vi%20la%20web%20y%20quiero%20arrancar%20el%20mantenimiento%20quincenal%20(auto).%20%C2%BFQu%C3%A9%20d%C3%ADas%20ten%C3%A9s%3F
+    - region [ref=f5e240]:
+      - generic [ref=f5e243]:
+        - heading "Armá tu lavado y pedí turno." [level=2] [ref=f5e244]
+        - link "Enviar por WhatsApp" [ref=f5e245] [cursor=pointer]:
+          - /url: https://wa.me/5492235385974?text=Hola%20Rama!%20Vi%20la%20web%20y%20quiero%20turno%20para%3A%20Lavado%20tradicional%20(auto).%20%C2%BFQu%C3%A9%20d%C3%ADas%20ten%C3%A9s%3F
+    - region [ref=f5e246]:
+      - generic [ref=f5e247]:
+        - heading "Ubicación" [level=2] [ref=f5e248]
+        - paragraph [ref=f5e249]: Atendemos únicamente con turno previo.
+        - paragraph [ref=f5e250]: La dirección exacta te la enviamos por WhatsApp al confirmar la reserva.
+        - paragraph [ref=f5e251]: "Zona: Barrio Constitución, Mar del Plata"
+      - generic [ref=f5e252]:
+        - generic [aria-hidden]: Zona de atención
+        - iframe [ref=f5e253]
+  - contentinfo [ref=f5e254]:
+    - generic [ref=f5e255]:
+      - generic [ref=f5e256]:
+        - link "Reservá tu turno por WhatsApp. (se abre en una pestaña nueva)" [ref=f5e258] [cursor=pointer]:
+          - /url: https://wa.me/5492235385974?text=Hola!%20Vi%20la%20web%20y%20quiero%20pedir%20un%20turno.
+          - text: Reservá tu turno por WhatsApp.
+          - generic [ref=f5e259]: (se abre en una pestaña nueva)
+        - generic [ref=f5e260]:
+          - navigation [ref=f5e261]:
+            - heading "Este sitio" [level=2] [ref=f5e262]
+            - list [ref=f5e263]:
+              - listitem [ref=f5e264]:
+                - link "Cómo reservar" [ref=f5e265] [cursor=pointer]:
+                  - /url: "#reservas"
+              - listitem [ref=f5e266]:
+                - link "Armá tu lavado" [ref=f5e267] [cursor=pointer]:
+                  - /url: "#configurador"
+              - listitem [ref=f5e268]:
+                - link "Trabajos" [ref=f5e269] [cursor=pointer]:
+                  - /url: "#trabajos"
+              - listitem [ref=f5e270]:
+                - link "Mantenimiento" [ref=f5e271] [cursor=pointer]:
+                  - /url: "#mantenimiento"
+              - listitem [ref=f5e272]:
+                - link "Ubicación" [ref=f5e273] [cursor=pointer]:
+                  - /url: "#ubicacion"
+          - generic [ref=f5e274]:
+            - heading "Servicios" [level=2] [ref=f5e275]
+            - list [ref=f5e276]:
+              - listitem [ref=f5e277]:
+                - link "Lavado tradicional" [ref=f5e278] [cursor=pointer]:
+                  - /url: "#configurador"
+              - listitem [ref=f5e279]:
+                - link "Lavado de motor" [ref=f5e280] [cursor=pointer]:
+                  - /url: "#configurador"
+              - listitem [ref=f5e281]:
+                - link "Plásticos" [ref=f5e282] [cursor=pointer]:
+                  - /url: "#configurador"
+              - listitem [ref=f5e283]:
+                - link "Sellador cerámico" [ref=f5e284] [cursor=pointer]:
+                  - /url: "#configurador"
+              - listitem [ref=f5e285]:
+                - link "Mantenimiento" [ref=f5e286] [cursor=pointer]:
+                  - /url: "#mantenimiento"
+          - generic [ref=f5e287]:
+            - heading "Escribinos" [level=2] [ref=f5e288]
+            - list [ref=f5e289]:
+              - listitem [ref=f5e290]:
+                - link "WhatsApp (se abre en una pestaña nueva)" [ref=f5e291] [cursor=pointer]:
+                  - /url: https://wa.me/5492235385974?text=Hola!%20Vi%20la%20web%20y%20quiero%20pedir%20un%20turno.
+                  - text: WhatsApp
+                  - generic [ref=f5e292]: (se abre en una pestaña nueva)
+              - listitem [ref=f5e293]:
+                - link "Instagram (se abre en una pestaña nueva)" [ref=f5e294] [cursor=pointer]:
+                  - /url: https://www.instagram.com/accesoriosvehicularesmdp/
+                  - text: Instagram
+                  - generic [ref=f5e295]: (se abre en una pestaña nueva)
+      - generic [ref=f5e297]:
+        - paragraph [ref=f5e298]:
+          - text: ¿Te gustaría una página como esta?
+          - link "Hagamos la tuya. (se abre en una pestaña nueva)" [ref=f5e299] [cursor=pointer]:
+            - /url: https://wa.me/5492236801937?text=Hola%20Lautaro%2C%20vi%20la%20p%C3%A1gina%20de%20Accesorios%20Vehiculares%20MdP%20y%20me%20gustar%C3%ADa%20una%20para%20mi%20negocio.
+            - emphasis [ref=f5e300]: Hagamos la tuya.
+            - generic [ref=f5e303]: (se abre en una pestaña nueva)
+        - link "Creado por Lautaro Fullone (se abre en una pestaña nueva)" [ref=f5e304] [cursor=pointer]:
+          - /url: https://lautarofullone.dev
+          - generic [ref=f5e305]: Creado por Lautaro Fullone
+          - generic [ref=f5e310]: (se abre en una pestaña nueva)
+      - paragraph [aria-hidden] [ref=f5e311]:
+        - generic [ref=f5e312]: Accesorios Vehiculares MdP
+  - group "Versiones (temporal)" [ref=f5e313]:
+    - generic [ref=f5e314]:
+      - generic [ref=f5e315]: Cierre
+      - radiogroup "Versión del cierre" [ref=f5e316]:
+        - radio "A" [checked] [ref=f5e317] [cursor=pointer]
+        - radio "B" [ref=f5e318] [cursor=pointer]
+        - radio "C" [ref=f5e319] [cursor=pointer]
+  - generic [ref=f5e322]:
+    - button "Menu" [ref=f5e323]
+    - button "Inspect" [ref=f5e329]
+    - button "Audit" [ref=f5e333]
+    - button "Settings" [ref=f5e338]

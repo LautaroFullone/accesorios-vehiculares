@@ -1,0 +1,35 @@
+---
+import { business, copy, mapEmbedUrl } from '../data/business';
+
+const { zone, zoom, shiftPx } = business.location;
+const mapWide = mapEmbedUrl(zone, zoom, shiftPx);
+const mapNarrow = mapEmbedUrl(zone, zoom);
+---
+
+<section id="ubicacion" class="map" data-card="right" aria-labelledby="map-title" style={`--zone-shift:${shiftPx}px`}>
+	<div class="section map-copy">
+		<h2 id="map-title">{copy.location.title}</h2>
+		<p class="notice">{copy.location.notice}</p>
+		<p class="lede">{copy.location.lede}</p>
+		<p class="zone-line">{copy.location.zoneFact}: {business.zone}</p>
+	</div>
+	<div class="map-frame">
+		<div class="map-zone" data-label={copy.location.zoneLabel} aria-hidden="true"></div>
+		<iframe
+			class="map-embed-wide"
+			src={mapWide}
+			title={copy.location.mapTitle}
+			loading="lazy"
+			tabindex="-1"
+			referrerpolicy="no-referrer-when-downgrade"
+		></iframe>
+		<iframe
+			class="map-embed-narrow"
+			src={mapNarrow}
+			title={copy.location.mapTitle}
+			loading="lazy"
+			tabindex="-1"
+			referrerpolicy="no-referrer-when-downgrade"
+		></iframe>
+	</div>
+</section>

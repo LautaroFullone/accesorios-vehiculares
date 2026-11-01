@@ -1,0 +1,50 @@
+---
+import VehicleBar from './VehicleBar.astro';
+import { copy, messages, waLink } from '../data/business';
+import { base, extras, formatARS } from '../data/services';
+
+const configHref = waLink(messages.config([base.short], 'auto'));
+---
+
+<section id="configurador" class="section" aria-labelledby="cfg-title">
+	<h2 id="cfg-title">{copy.configurator.title}</h2>
+</section>
+
+<VehicleBar id="cfg" context="configurador" />
+
+<div class="section cfg-grid">
+	<div class="cfg-list">
+		<div class="row base">
+			<svg class="check" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
+			<div class="row-text">
+				<span class="row-name">{base.name} <span class="tag">{copy.configurator.includedTag}</span></span>
+				<span class="row-desc">{base.description}</span>
+			</div>
+			<span class="price" data-price data-auto={base.price.auto} data-camioneta={base.price.camioneta}>{formatARS(base.price.auto)}</span>
+		</div>
+		{extras.map((e) => (
+			<button type="button" role="switch" aria-checked="false" class="row extra" data-extra={e.id}>
+				<span class="switch" aria-hidden="true"><span class="thumb"></span></span>
+				<span class="row-text">
+					<span class="row-name">{e.name}</span>
+					<span class="row-desc">{e.description}</span>
+				</span>
+				<span class="price" data-price data-prefix="+" data-auto={e.price.auto} data-camioneta={e.price.camioneta}>+{formatARS(e.price.auto)}</span>
+			</button>
+		))}
+	</div>
+
+	<aside class="summary" data-summary aria-labelledby="sum-title">
+		<h3 id="sum-title">{copy.configurator.summaryTitle}</h3>
+		<p class="sum-vehicle" data-summary-vehicle>Auto</p>
+		<ul class="sum-list" data-summary-list>
+			<li><span>{base.name}</span><span class="tnum">{formatARS(base.price.auto)}</span></li>
+		</ul>
+		<div class="sum-total">
+			<span>{copy.configurator.totalLabel}</span>
+			<span class="price total" role="status" data-total>{formatARS(base.price.auto)}</span>
+		</div>
+		<a class="btn block" href={configHref} data-wa="config" rel="noopener">{copy.configurator.send}</a>
+		<p class="sum-note">{copy.configurator.note}</p>
+	</aside>
+</div>

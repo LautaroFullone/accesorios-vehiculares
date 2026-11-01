@@ -1,0 +1,19 @@
+---
+import { copy, messages, waLink } from '../data/business';
+import { base } from '../data/services';
+
+const configHref = waLink(messages.config([base.short], 'auto'));
+---
+
+<section id="cierre" class="close" data-variant="a" aria-labelledby="close-title">
+	<div class="close-media">
+		<picture>
+			<source media="(min-width: 800px)" srcset={copy.close.image.desktop} />
+			<img src={copy.close.image.mobile} alt={copy.close.image.alt} loading="lazy" />
+		</picture>
+	</div>
+	<div class="close-inner">
+		<h2 id="close-title">{copy.close.title}</h2>
+		<a class="btn" href={configHref} data-wa="config" rel="noopener">{copy.close.cta}</a>
+	</div>
+</section>

@@ -1,0 +1,23 @@
+---
+import { copy } from '../data/business';
+import { vehicles } from '../data/services';
+
+interface Props {
+	id: string;
+	context: string;
+}
+const { id, context } = Astro.props;
+---
+
+<div class="vehicle-bar con-grano">
+	<div class="vehicle-inner">
+		<span class="vehicle-label" aria-hidden="true">{copy.configurator.vehicleLabel}</span>
+		<div class="seg" role="radiogroup" aria-label={`${copy.configurator.vehicleLabel}, ${context}`} data-vehicle-group>
+			{vehicles.map((v, i) => (
+				<button type="button" role="radio" aria-checked={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-vehicle={v.id}>
+					{v.label}
+				</button>
+			))}
+		</div>
+	</div>
+</div>
