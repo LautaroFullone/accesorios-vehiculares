@@ -54,7 +54,8 @@ export const copy = {
 		'Lavado, sellador cerámico y mantenimiento para autos que se cuidan, en Mar del Plata. Armá tu servicio y reservá tu turno por WhatsApp.',
 	hero: {
 		headline: 'Que vuelva a verse como el primer día.',
-		subtitle: 'Cada auto necesita algo distinto. Elegí lo que necesita el tuyo y reservá un turno con nosotros',
+		subtitle:
+			'Cada auto necesita algo distinto. Elegí lo que necesita el tuyo y reservá un turno con nosotros',
 		cta: 'Pedí tu turno',
 	},
 	configurator: {
@@ -64,7 +65,7 @@ export const copy = {
 		summaryTitle: 'Tu configuración',
 		totalLabel: 'Total estimado',
 		send: 'Enviar por WhatsApp',
-		note: 'Total estimado. Te confirmamos el turno por WhatsApp.',
+		note: 'Te confirmamos el turno por WhatsApp.',
 	},
 	maintenance: {
 		title: 'Mantenimiento',
@@ -83,13 +84,12 @@ export const copy = {
 		beforeAfter: null as null | { before: string; after: string; alt: string },
 	},
 	close: {
-		title: 'Armá tu lavado y pedí turno.',
-		cta: 'Enviar por WhatsApp',
-		// TODO: reemplazar por una foto de camioneta (vista de frente, al revés que el hero, o el interior).
+		title: 'Tu turno a un mensaje de distancia.',
+		cta: 'Escribinos',
 		image: {
-			desktop: '/hero-bmw-x2-desktop.webp',
-			mobile: '/hero-bmw-x2-mobile.webp',
-			alt: '',
+			desktop: { src: '/cierre-q8-desktop.webp', width: 1536, height: 1024 },
+			mobile: { src: '/cierre-q8-mobile.webp', width: 1024, height: 1536 },
+			alt: 'Audi Q8 gris oscuro, visto de frente, en un estudio oscuro con luz blanca fría.',
 		},
 	},
 	nav: {
@@ -124,6 +124,7 @@ export const copy = {
 
 export const messages = {
 	general: 'Hola! Vi la web y quiero pedir un turno.',
+	turno: 'Hola Rama! Vi la web y quiero sacar un turno.',
 	config: (names: string[], vehicle: string) =>
 		`Hola Rama! Vi la web y quiero turno para: ${names.join(' + ')} (${vehicle}). ¿Qué días tenés?`,
 	plan: (ask: string, vehicle: string) =>

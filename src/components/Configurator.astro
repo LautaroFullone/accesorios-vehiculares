@@ -41,7 +41,7 @@ const configHref = waLink(messages.config([base.short], 'auto'));
 			<li><span>{base.name}</span><span class="tnum">{formatARS(base.price.auto)}</span></li>
 		</ul>
 		<div class="sum-total">
-			<span>{copy.configurator.totalLabel}</span>
+			<span class="text-center">{copy.configurator.totalLabel}</span>
 			<span class="price total" role="status" data-total>{formatARS(base.price.auto)}</span>
 		</div>
 		<a class="btn block" href={configHref} data-wa="config" rel="noopener">{copy.configurator.send}</a>
