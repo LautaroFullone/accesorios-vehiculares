@@ -1,0 +1,16 @@
+node_modules
+dist
+.astro
+.git
+.playwright-mcp
+.claude
+.agents
+.impeccable
+.vscode
+.DS_Store
+docs
+npm-debug.log*
+.env
+.env.*
+Dockerfile
+.dockerignore
