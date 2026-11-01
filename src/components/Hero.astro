@@ -1,12 +1,21 @@
 ---
 import { copy } from '../data/business';
+import { hero } from '../data/imagenes';
 ---
 
 <section id="inicio" class="hero" aria-labelledby="hero-title">
 	<picture>
-		<source media="(min-width: 800px)" srcset="/hero-bmw-x2-desktop.webp" width="3072" height="2048" />
+		<source
+			media="(min-width: 800px)"
+			srcset={hero.desktop.srcSet.attribute}
+			sizes={hero.desktopSizes}
+			width="3072"
+			height="2048"
+		/>
 		<img
-			src="/hero-bmw-x2-mobile.webp"
+			src={hero.mobile.src}
+			srcset={hero.mobile.srcSet.attribute}
+			sizes={hero.mobileSizes}
 			width="2048"
 			height="3072"
 			alt="Parte trasera de un BMW negro mojado, con las ópticas traseras encendidas, en un garaje oscuro."

@@ -1,7 +1,9 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import Icon from './Icon.astro';
 import works from '../data/works.json';
 import { comparisons } from '../data/comparisons';
+import { foto } from '../data/trabajos';
 import { business, copy, messages, waLink } from '../data/business';
 
 const t = copy.works;
@@ -19,8 +21,21 @@ const layout: { size: 'big' | 'tall' | 'wide' | 'sq'; pos?: string }[] = [
 	{ size: 'wide', pos: '50% 60%' },
 ];
 
-// Las fotos son cuadradas; el alto y ancho reales solo sirven para reservar la proporción.
-const photoSize = 1440;
+// Anchos generados al compilar (WebP). El navegador elige según `sizes`; nunca baja el original.
+const gridWidths = [360, 560, 800, 1120];
+const gridSizes = {
+	big: '(min-width: 800px) min(50vw, 36rem), min(80vw, 22rem)',
+	wide: '(min-width: 800px) min(50vw, 36rem), min(80vw, 22rem)',
+	tall: '(min-width: 800px) min(25vw, 18rem), min(80vw, 22rem)',
+	sq: '(min-width: 800px) min(25vw, 18rem), min(80vw, 22rem)',
+};
+const stageWidths = [480, 760, 1080, 1520];
+const stageSizes = '(min-width: 800px) min(62vw, 46rem), calc(100vw - 2.5rem)';
+
+// Versión grande para el visor, una por foto.
+const full = await Promise.all(
+	works.map((w) => getImage({ src: foto(w.src), width: 1600, format: 'webp' }).then((r) => r.src)),
+);
 ---
 
 <section id="trabajos" class="section works" aria-labelledby="works-title" data-works>
@@ -31,22 +46,24 @@ const photoSize = 1440;
 		{comparisons.map((c, i) => (
 			<div class="ba-pair" data-ba-pair hidden={i !== 0} id={`ba-${c.id}`}>
 				<div class="ba-stage" data-ba-stage style="--pos: 50%">
-					<img
+					<Image
 						class="ba-img"
-						src={c.before.src}
+						src={foto(c.before.src)}
 						alt={c.before.alt}
-						width={c.width}
-						height={c.height}
+						width={1080}
+						widths={stageWidths}
+						sizes={stageSizes}
 						loading="lazy"
 						decoding="async"
 						draggable="false"
 					/>
-					<img
+					<Image
 						class="ba-img ba-after"
-						src={c.after.src}
+						src={foto(c.after.src)}
 						alt={c.after.alt}
-						width={c.width}
-						height={c.height}
+						width={1080}
+						widths={stageWidths}
+						sizes={stageSizes}
 						loading="lazy"
 						decoding="async"
 						draggable="false"
@@ -111,13 +128,15 @@ const photoSize = 1440;
 							type="button"
 							class="w-open"
 							data-viewer-open={i}
+							data-full={full[i]}
 							aria-label={`Ampliar foto${modelo ? `: ${modelo}` : ''}, ${w.servicio.toLowerCase()}`}
 						>
-							<img
-								src={encodeURI(w.src)}
+							<Image
+								src={foto(w.src)}
 								alt={w.alt}
-								width={photoSize}
-								height={photoSize}
+								width={800}
+								widths={gridWidths}
+								sizes={gridSizes[cell.size]}
 								loading="lazy"
 								decoding="async"
 								style={cell.pos ? `object-position: ${cell.pos}` : undefined}
@@ -145,7 +164,7 @@ const photoSize = 1440;
 	<dialog class="viewer" aria-label={t.viewer.label} data-viewer>
 		<div class="viewer-frame" data-viewer-frame>
 			<figure class="viewer-figure">
-				<img class="viewer-img" src={encodeURI(works[0].src)} alt={works[0].alt} loading="lazy" decoding="async" data-viewer-img />
+				<img class="viewer-img" src={full[0]} alt={works[0].alt} width="1600" height="1600" loading="lazy" decoding="async" data-viewer-img />
 				<figcaption class="viewer-cap">
 					<span class="w-tag" data-viewer-tag></span>
 					<span class="viewer-model" data-viewer-model></span>

@@ -1,18 +1,16 @@
 // Pares antes/después del slider de Trabajos. Mismo tamaño y encuadre en las dos fotos de cada par.
-// Para cambiar una foto, cambiá la ruta acá: los archivos viven en public/trabajos/.
+// Para cambiar una foto, cambiá el nombre del archivo acá: las fotos viven en src/assets/trabajos/.
 
-const AMAROK_ANTES = '/trabajos/amarok-antes.webp'
-const AMAROK_DESPUES = '/trabajos/amarok-despues.webp'
-const HILUX_MOTOR_ANTES = '/trabajos/hilux-motor-antes.webp'
-const HILUX_MOTOR_DESPUES = '/trabajos/hilux-motor-despues.webp'
+const AMAROK_ANTES = 'amarok-antes.webp'
+const AMAROK_DESPUES = 'amarok-despues.webp'
+const HILUX_MOTOR_ANTES = 'hilux-motor-antes.webp'
+const HILUX_MOTOR_DESPUES = 'hilux-motor-despues.webp'
 
 export interface Comparison {
 	id: string
 	servicio: string // rótulo visible y texto del mensaje de WhatsApp
 	before: { src: string; alt: string }
 	after: { src: string; alt: string }
-	width: number
-	height: number
 }
 
 export const comparisons: Comparison[] = [
@@ -27,8 +25,6 @@ export const comparisons: Comparison[] = [
 			src: AMAROK_DESPUES,
 			alt: 'La misma Amarok después del lavado tradicional, limpia y brillante.',
 		},
-		width: 4096,
-		height: 4096,
 	},
 	{
 		id: 'hilux-motor',
@@ -41,7 +37,5 @@ export const comparisons: Comparison[] = [
 			src: HILUX_MOTOR_DESPUES,
 			alt: 'El mismo motor después del lavado y acondicionado, limpio.',
 		},
-		width: 4096,
-		height: 4096,
 	},
 ]

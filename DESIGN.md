@@ -207,7 +207,7 @@ Empty dashed-outline Panel tiles with an uppercase grey caption, standing in unt
 Plans are hairline rows (text, price with "por lavado", ghost button). Steps are numbered in condensed red numerals between hairlines. The closing photo section reuses the hero photo under a Studio Black scrim with an 11ch H2 and a primary button.
 
 ### Imagery and provenance
-- `public/hero-bmw-x2-desktop.webp` and `hero-bmw-x2-mobile.webp`: real car washed by the owner, photographed from the Instagram account, AI-retouched for the hero only (studio background, water drops, lit taillight). Reused in the closing section.
+- `src/assets/hero/hero-bmw-m240i-desktop.webp` and `hero-bmw-m240i-mobile.webp`: real car washed by the owner, photographed from the Instagram account, AI-retouched for the hero only (studio background, water drops, lit taillight). Reused in the closing section.
 - `public/logo-actual.jpg`: Instagram profile picture, provisional, to be replaced. It is knocked into the black with `mix-blend-mode: lighten` in the top bar.
 
 ## Do's and Don'ts

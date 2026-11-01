@@ -55,11 +55,11 @@ export const copy = {
 	hero: {
 		headline: 'Que vuelva a verse como el primer día.',
 		subtitle:
-			'Cada auto necesita algo distinto. Elegí lo que necesita el tuyo y reservá un turno con nosotros',
+			'Cada vehículo necesita algo distinto. Elegí lo que necesita el tuyo y reservá un turno con nosotros',
 		cta: 'Pedí tu turno',
 	},
 	configurator: {
-		title: 'Configurá el cuidado de tu auto',
+		title: 'Configurá tu lavado',
 		vehicleLabel: 'Tu vehículo',
 		includedTag: 'Incluido',
 		summaryTitle: 'Tu configuración',
@@ -74,7 +74,7 @@ export const copy = {
 		cta: 'Quiero este plan',
 	},
 	works: {
-		title: 'Tu auto merece brillar así.',
+		title: 'Tu vehículo merece brillar así.',
 		before: 'Antes',
 		after: 'Después',
 		compareLabel: 'Comparar antes y después',
@@ -94,8 +94,6 @@ export const copy = {
 		title: 'Tu turno a un mensaje de distancia.',
 		cta: 'Escribinos',
 		image: {
-			desktop: { src: '/cierre-q8-desktop.webp', width: 1536, height: 1024 },
-			mobile: { src: '/cierre-q8-mobile.webp', width: 1024, height: 1536 },
 			alt: 'Audi Q8 gris oscuro, visto de frente, en un estudio oscuro con luz blanca fría.',
 		},
 	},
@@ -132,7 +130,8 @@ export const copy = {
 export const messages = {
 	general: 'Hola! Vi la web y quiero pedir un turno.',
 	turno: 'Hola Rama! Vi la web y quiero sacar un turno.',
-	servicio: (name: string) => `Hola Rama! Vi la web y quiero turno para: ${name}. ¿Qué días tenés?`,
+	servicio: (name: string) =>
+		`Hola Rama! Vi la web y quiero turno para: ${name}. ¿Qué días tenés?`,
 	config: (names: string[], vehicle: string) =>
 		`Hola Rama! Vi la web y quiero turno para: ${names.join(' + ')} (${vehicle}). ¿Qué días tenés?`,
 	plan: (ask: string, vehicle: string) =>

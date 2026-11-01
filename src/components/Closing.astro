@@ -1,5 +1,6 @@
 ---
 import { copy, messages, waLink } from '../data/business';
+import { cierre } from '../data/imagenes';
 
 const { image } = copy.close;
 const turnoHref = waLink(messages.turno);
@@ -8,11 +9,19 @@ const turnoHref = waLink(messages.turno);
 <section id="cierre" class="close" aria-labelledby="close-title">
 	<div class="close-media">
 		<picture>
-			<source media="(min-width: 800px)" srcset={image.desktop.src} width={image.desktop.width} height={image.desktop.height} />
+			<source
+				media="(min-width: 800px)"
+				srcset={cierre.desktop.srcSet.attribute}
+				sizes="(min-width: 800px) min(70vw, 60rem)"
+				width="1536"
+				height="1024"
+			/>
 			<img
-				src={image.mobile.src}
-				width={image.mobile.width}
-				height={image.mobile.height}
+				src={cierre.mobile.src}
+				srcset={cierre.mobile.srcSet.attribute}
+				sizes="100vw"
+				width="1024"
+				height="1536"
 				alt={image.alt}
 				loading="lazy"
 				decoding="async"

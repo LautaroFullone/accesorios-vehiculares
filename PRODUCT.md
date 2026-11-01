@@ -61,7 +61,7 @@ Copys editables: los textos principales del sitio (titular, subtítulo, llamados
 
 ## Evidence on Hand
 
-- `public/hero-bmw-x2-desktop.webp`, `public/hero-bmw-x2-mobile.webp` (y originales `.png`): auto real lavado por Ramiro (foto de su Instagram), retocada con IA solo para el hero (fondo de estudio oscuro, gotas de agua y luz trasera encendida). No sirve como antes/después ni como prueba del resultado del lavado.
+- `src/assets/hero/hero-bmw-m240i-desktop.webp`, `src/assets/hero/hero-bmw-m240i-mobile.webp` (y originales `.png` en `src/assets/originales/`): auto real lavado por Ramiro (foto de su Instagram), retocada con IA solo para el hero (fondo de estudio oscuro, gotas de agua y luz trasera encendida). No sirve como antes/después ni como prueba del resultado del lavado.
 - Hay más fotos reales de trabajos (del Instagram del negocio) que se van a sumar después. Hasta entonces, la galería y el antes/después usan placeholders claramente marcados con `TODO`.
 - Reseñas y testimonios: no hay. No inventar ninguno, ni cantidad de clientes, años de experiencia, calificaciones o garantías. Tampoco superlativos que no se puedan verificar ("el mejor", "número uno").
 

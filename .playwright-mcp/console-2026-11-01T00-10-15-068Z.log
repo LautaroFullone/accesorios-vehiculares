@@ -1,1 +1,16 @@
 [ 4696106ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1835
+[12177921ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/amarok-antes.webp:0
+[12177921ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/amarok-despues.webp:0
+[12177944ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/amarok-antes.webp:0
+[12177945ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/amarok-despues.webp:0
+[12177946ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/hilux-motor-antes.webp:0
+[12177947ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/hilux-motor-despues.webp:0
+[12177948ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/ford-raptor.webp:0
+[12177949ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/maverick.webp:0
+[12177950ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/ford-territory.webp:0
+[12177951ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/renault-kangoo.webp:0
+[12177952ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/interior-onix.webp:0
+[12177952ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/mercedes-a250.webp:0
+[12177953ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/toyota-etios.webp:0
+[12177954ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/interior-volkswagen.webp:0
+[12177955ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/ford-raptor.webp:0

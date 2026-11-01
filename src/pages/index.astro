@@ -2,6 +2,7 @@
 import '@fontsource-variable/archivo/wdth.css';
 import '../styles/global.css';
 import { copy } from '../data/business';
+import { hero } from '../data/imagenes';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Booking from '../components/Booking.astro';
@@ -23,8 +24,8 @@ import StickyBar from '../components/StickyBar.astro';
 		<meta name="theme-color" content="#050506" />
 		<meta name="description" content={copy.description} />
 		<title>{copy.title}</title>
-		<link rel="preload" as="image" href="/hero-bmw-x2-mobile.webp" media="(max-width: 799px)" />
-		<link rel="preload" as="image" href="/hero-bmw-x2-desktop.webp" media="(min-width: 800px)" />
+		<link rel="preload" as="image" imagesrcset={hero.mobile.srcSet.attribute} imagesizes={hero.mobileSizes} media="(max-width: 799px)" />
+		<link rel="preload" as="image" imagesrcset={hero.desktop.srcSet.attribute} imagesizes={hero.desktopSizes} media="(min-width: 800px)" />
 	</head>
 	<body class="con-grano">
 		<Header />

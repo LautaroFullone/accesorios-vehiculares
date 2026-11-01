@@ -30,27 +30,57 @@ function initComparisons(root: HTMLElement) {
       setPos(stage, range, Number(range.value));
     });
 
-    // Arrastre con mouse y dedo. touch-action: pan-y deja el scroll vertical al navegador.
+    // Arrastre con mouse y dedo. touch-action: pan-y deja el scroll vertical al navegador:
+    // con el dedo, el comparador toma el control solo cuando el gesto es claramente horizontal.
     const fromPointer = (e: PointerEvent) => {
       const r = stage.getBoundingClientRect();
       setPos(stage, range, ((e.clientX - r.left) / r.width) * 100);
     };
-    stage.addEventListener('pointerdown', (e) => {
-      if (e.button !== 0) return;
+    let start: { x: number; y: number; id: number } | null = null;
+    // Flag propio: con el dedo el navegador captura el puntero solo, así que hasPointerCapture no sirve.
+    let dragId: number | null = null;
+    const grab = (e: PointerEvent) => {
       touched = true;
+      start = null;
+      dragId = e.pointerId;
       stage.setPointerCapture(e.pointerId);
       stage.dataset.dragging = '';
       fromPointer(e);
+    };
+    stage.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0) return;
+      if (e.pointerType === 'mouse') grab(e);
+      else start = { x: e.clientX, y: e.clientY, id: e.pointerId };
     });
     stage.addEventListener('pointermove', (e) => {
-      if (stage.hasPointerCapture(e.pointerId)) fromPointer(e);
+      if (dragId === e.pointerId) return fromPointer(e);
+      if (!start || start.id !== e.pointerId) return;
+      const dx = Math.abs(e.clientX - start.x);
+      const dy = Math.abs(e.clientY - start.y);
+      if (dx > 6 && dx > dy) grab(e);
     });
     const end = (e: PointerEvent) => {
+      // Un toque corto, sin arrastre, lleva la línea a ese punto.
+      const tap =
+        start &&
+        start.id === e.pointerId &&
+        e.type === 'pointerup' &&
+        Math.hypot(e.clientX - start.x, e.clientY - start.y) < 10;
+      if (tap) {
+        touched = true;
+        fromPointer(e);
+      }
+      start = null;
+      dragId = null;
       if (stage.hasPointerCapture(e.pointerId)) stage.releasePointerCapture(e.pointerId);
       delete stage.dataset.dragging;
     };
     stage.addEventListener('pointerup', end);
     stage.addEventListener('pointercancel', end);
+    stage.addEventListener('lostpointercapture', () => {
+      dragId = null;
+      delete stage.dataset.dragging;
+    });
 
     // Una sola invitación a arrastrar: 50 → 65 → 50 en ~1 s al entrar en pantalla.
     if (reduceMotion.matches) return;
@@ -117,7 +147,7 @@ function initViewer(root: HTMLElement) {
     const btn = openers[index];
     const thumb = btn.querySelector('img')!;
     const fig = btn.closest('figure')!;
-    img.src = thumb.currentSrc || thumb.src;
+    img.src = btn.dataset.full || thumb.currentSrc || thumb.src;
     img.alt = thumb.alt;
     tag.textContent = fig.querySelector('.w-tag')?.textContent ?? '';
     model.textContent = fig.querySelector('.w-model')?.textContent ?? '';
@@ -153,7 +183,12 @@ function initViewer(root: HTMLElement) {
 
   // Swipe horizontal.
   let x0: number | null = null;
-  img.addEventListener('pointerdown', (e) => (x0 = e.clientX));
+  img.addEventListener('pointerdown', (e) => {
+    x0 = e.clientX;
+    img.setPointerCapture(e.pointerId); // el swipe sigue aunque el dedo salga de la foto
+  });
+  // Si el gesto pasa a ser scroll o se interrumpe, no queda un swipe a medias.
+  img.addEventListener('pointercancel', () => (x0 = null));
   img.addEventListener('pointerup', (e) => {
     if (x0 === null) return;
     const dx = e.clientX - x0;
