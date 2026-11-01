@@ -1,0 +1,61 @@
+[
+	{
+		"src": "/trabajos/ford-raptor.webp",
+		"alt": "Ford Ranger Raptor roja vista de frente, recién terminada, con el piso todavía mojado.",
+		"modelo": "Ford Ranger Raptor",
+		"servicio": "Mantenimiento cerámico",
+		"servicioId": "TODO",
+		"todo": "Confirmar a qué servicio del sitio corresponde 'Mantenimiento cerámico' (¿plan semanal/quincenal o sellador?)."
+	},
+	{
+		"src": "/trabajos/maverick.webp",
+		"alt": "Ford Maverick azul vista de frente, después de aplicar sellador.",
+		"modelo": "Ford Maverick",
+		"servicio": "Sellador",
+		"servicioId": "sellador"
+	},
+	{
+		"src": "/trabajos/ford-territory.webp",
+		"alt": "Ford Territory gris claro vista de frente, después de aplicar sellador.",
+		"modelo": "Ford Territory",
+		"servicio": "Sellador",
+		"servicioId": "sellador"
+	},
+	{
+		"src": "/trabajos/renault kangoo.webp",
+		"alt": "Renault Kangoo roja vista de frente, después de aplicar sellador.",
+		"modelo": "Renault Kangoo",
+		"servicio": "Sellador",
+		"servicioId": "sellador"
+	},
+	{
+		"src": "/trabajos/interior-onix.webp",
+		"alt": "Interior limpio con el tablero, el volante y la consola acondicionados.",
+		"modelo": "TODO",
+		"servicio": "Interior",
+		"servicioId": "plasticos",
+		"todo": "El pedido dice Nissan Kicks, pero el archivo se llama interior-onix y el volante es Chevrolet. Confirmar el modelo."
+	},
+	{
+		"src": "/trabajos/mercedes-a250.webp",
+		"alt": "Mercedes-Benz A250 blanco visto de frente, después del lavado quincenal.",
+		"modelo": "Mercedes-Benz A250",
+		"servicio": "Lavado quincenal",
+		"servicioId": "quincenal"
+	},
+	{
+		"src": "/trabajos/toyota-etios.webp",
+		"alt": "Toyota Etios blanco visto de frente, después de aplicar sellador.",
+		"modelo": "Toyota Etios",
+		"servicio": "Sellador",
+		"servicioId": "sellador"
+	},
+	{
+		"src": "/trabajos/interior-volkswagen.webp",
+		"alt": "Interior de una Volkswagen Amarok con el tablero, el volante y los asientos limpios.",
+		"modelo": "Volkswagen Amarok",
+		"servicio": "Interior",
+		"servicioId": "TODO",
+		"todo": "Confirmar a qué servicio del sitio corresponde la limpieza de interior (¿plásticos?)."
+	}
+]

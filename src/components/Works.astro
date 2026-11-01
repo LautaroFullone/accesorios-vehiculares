@@ -1,23 +1,167 @@
 ---
-import { copy } from '../data/business';
+import Icon from './Icon.astro';
+import works from '../data/works.json';
+import { comparisons } from '../data/comparisons';
+import { business, copy, messages, waLink } from '../data/business';
+
+const t = copy.works;
+
+// Formato de cada celda del mosaico (escritorio), en el orden de works.json.
+// big = 2×2, tall = 1×2, wide = 2×1, sq = 1×1. `pos` encuadra la foto (por defecto, el auto en la mitad de abajo).
+const layout: { size: 'big' | 'tall' | 'wide' | 'sq'; pos?: string }[] = [
+	{ size: 'big', pos: '50% 85%' },
+	{ size: 'tall', pos: '28% 80%' },
+	{ size: 'sq' },
+	{ size: 'sq' },
+	{ size: 'sq', pos: '50% 50%' },
+	{ size: 'wide', pos: '50% 78%' },
+	{ size: 'sq' },
+	{ size: 'wide', pos: '50% 60%' },
+];
+
+// Las fotos son cuadradas; el alto y ancho reales solo sirven para reservar la proporción.
+const photoSize = 1440;
 ---
 
-<section id="trabajos" class="section works" aria-labelledby="works-title">
-	<h2 id="works-title">{copy.works.title}</h2>
-	<div class="works-grid">
-		<figure class="frame ba">
-			<div class="ba-pair">
-				<div class="ph" role="img" aria-label={`${copy.works.before}: ${copy.works.placeholder}`}><span>{copy.works.before}</span></div>
-				<div class="ph" role="img" aria-label={`${copy.works.after}: ${copy.works.placeholder}`}><span>{copy.works.after}</span></div>
+<section id="trabajos" class="section works" aria-labelledby="works-title" data-works>
+	<h2 id="works-title">{t.title}</h2>
+
+	<!-- Antes / después -->
+	<div class="ba" data-ba>
+		{comparisons.map((c, i) => (
+			<div class="ba-pair" data-ba-pair hidden={i !== 0} id={`ba-${c.id}`}>
+				<div class="ba-stage" data-ba-stage style="--pos: 50%">
+					<img
+						class="ba-img"
+						src={c.before.src}
+						alt={c.before.alt}
+						width={c.width}
+						height={c.height}
+						loading="lazy"
+						decoding="async"
+						draggable="false"
+					/>
+					<img
+						class="ba-img ba-after"
+						src={c.after.src}
+						alt={c.after.alt}
+						width={c.width}
+						height={c.height}
+						loading="lazy"
+						decoding="async"
+						draggable="false"
+					/>
+					<span class="ba-tag ba-tag-before" aria-hidden="true">{t.before}</span>
+					<span class="ba-tag ba-tag-after" aria-hidden="true">{t.after}</span>
+					<div class="ba-line" aria-hidden="true">
+						<span class="ba-handle">
+							<svg viewBox="0 0 24 24" width="22" height="22"><path d="M10 7l-5 5 5 5M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+						</span>
+					</div>
+					<input
+						class="ba-range"
+						type="range"
+						min="0"
+						max="100"
+						step="1"
+						value="50"
+						aria-valuetext="Antes 50%, después 50%"
+						aria-label={`${t.compareLabel}: ${c.servicio}`}
+						data-ba-range
+					/>
+				</div>
+				<div class="ba-meta">
+					<p class="ba-service">{c.servicio}</p>
+					<a class="btn ghost" href={waLink(messages.servicio(c.servicio))} rel="noopener">{t.cta}</a>
+				</div>
 			</div>
-		</figure>
-		{[0, 1, 2].map((i) => {
-			const photo = copy.works.photos[i];
-			return photo ? (
-				<figure class="frame"><img src={photo.src} alt={photo.alt} loading="lazy" /></figure>
-			) : (
-				<figure class="frame"><div class="ph" role="img" aria-label={copy.works.placeholder}><span>{copy.works.placeholder}</span></div></figure>
+		))}
+
+		<div class="ba-nav" role="group" aria-label={t.pairNav}>
+			<button type="button" class="ba-arrow" data-ba-step="-1" aria-label={t.prev}>
+				<Icon name="chevronLeft" class="icon" />
+			</button>
+			<div class="ba-dots">
+				{comparisons.map((c, i) => (
+					<button
+						type="button"
+						class="ba-dot"
+						data-ba-dot={i}
+						aria-controls={`ba-${c.id}`}
+						aria-current={i === 0 ? 'true' : 'false'}
+						aria-label={c.servicio}
+					></button>
+				))}
+			</div>
+			<button type="button" class="ba-arrow" data-ba-step="1" aria-label={t.next}>
+				<Icon name="chevronRight" class="icon" />
+			</button>
+		</div>
+	</div>
+
+	<!-- Resultados -->
+	<ul class="w-grid" role="list">
+		{works.map((w, i) => {
+			const cell = layout[i] ?? { size: 'sq' };
+			const modelo = w.modelo === 'TODO' ? '' : w.modelo;
+			return (
+				<li class={`w-cell w-${cell.size}`} data-reveal style={`--i: ${i}`}>
+					<figure>
+						<button
+							type="button"
+							class="w-open"
+							data-viewer-open={i}
+							aria-label={`Ampliar foto${modelo ? `: ${modelo}` : ''}, ${w.servicio.toLowerCase()}`}
+						>
+							<img
+								src={encodeURI(w.src)}
+								alt={w.alt}
+								width={photoSize}
+								height={photoSize}
+								loading="lazy"
+								decoding="async"
+								style={cell.pos ? `object-position: ${cell.pos}` : undefined}
+							/>
+						</button>
+						<span class="w-tag">{w.servicio}</span>
+						{modelo && <figcaption class="w-model">{modelo}</figcaption>}
+					</figure>
+				</li>
 			);
 		})}
-	</div>
+		<li class="w-cell w-wide w-ig" data-reveal style={`--i: ${works.length}`}>
+			<a href={business.instagram.url} target="_blank" rel="noopener">
+				<Icon name="instagram" class="icon w-ig-icon" />
+				<span class="w-ig-text">{t.instagram}</span>
+				<span class="w-ig-handle">
+					{business.instagram.handle}
+					<Icon name="arrowUpRight" class="icon icon-sm" />
+				</span>
+				<span class="sr-only">(se abre en una pestaña nueva)</span>
+			</a>
+		</li>
+	</ul>
+
+	<dialog class="viewer" aria-label={t.viewer.label} data-viewer>
+		<div class="viewer-frame" data-viewer-frame>
+			<figure class="viewer-figure">
+				<img class="viewer-img" src={encodeURI(works[0].src)} alt={works[0].alt} loading="lazy" decoding="async" data-viewer-img />
+				<figcaption class="viewer-cap">
+					<span class="w-tag" data-viewer-tag></span>
+					<span class="viewer-model" data-viewer-model></span>
+					<span class="viewer-count" data-viewer-count></span>
+				</figcaption>
+			</figure>
+		</div>
+		<button type="button" class="viewer-btn viewer-close" data-viewer-close aria-label={t.viewer.close}>
+			<Icon name="close" class="icon" />
+		</button>
+		<button type="button" class="viewer-btn viewer-prev" data-viewer-step="-1" aria-label={t.viewer.prev}>
+			<Icon name="chevronLeft" class="icon" />
+		</button>
+		<button type="button" class="viewer-btn viewer-next" data-viewer-step="1" aria-label={t.viewer.next}>
+			<Icon name="chevronRight" class="icon" />
+		</button>
+	</dialog>
+
 </section>

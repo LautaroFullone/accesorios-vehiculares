@@ -74,14 +74,21 @@ export const copy = {
 		cta: 'Quiero este plan',
 	},
 	works: {
-		// TODO: el título y la sección siguen provisorios mientras las fotos sean placeholders.
 		title: 'Tu auto merece brillar así.',
 		before: 'Antes',
 		after: 'Después',
-		placeholder: 'Foto del trabajo',
-		// TODO: sumar fotos reales de Instagram: { src: '/trabajos/foto.webp', alt: 'Descripción' }
-		photos: [] as { src: string; alt: string }[],
-		beforeAfter: null as null | { before: string; after: string; alt: string },
+		compareLabel: 'Comparar antes y después',
+		cta: 'Quiero este servicio',
+		pairNav: 'Elegir trabajo',
+		prev: 'Trabajo anterior',
+		next: 'Trabajo siguiente',
+		instagram: 'Ver más trabajos en Instagram',
+		viewer: {
+			label: 'Visor de fotos',
+			close: 'Cerrar',
+			prev: 'Foto anterior',
+			next: 'Foto siguiente',
+		},
 	},
 	close: {
 		title: 'Tu turno a un mensaje de distancia.',
@@ -125,6 +132,7 @@ export const copy = {
 export const messages = {
 	general: 'Hola! Vi la web y quiero pedir un turno.',
 	turno: 'Hola Rama! Vi la web y quiero sacar un turno.',
+	servicio: (name: string) => `Hola Rama! Vi la web y quiero turno para: ${name}. ¿Qué días tenés?`,
 	config: (names: string[], vehicle: string) =>
 		`Hola Rama! Vi la web y quiero turno para: ${names.join(' + ')} (${vehicle}). ¿Qué días tenés?`,
 	plan: (ask: string, vehicle: string) =>
